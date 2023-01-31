@@ -13,7 +13,7 @@ metadata:
     alb.ingress.kubernetes.io/healthcheck-port: traffic-port
     alb.ingress.kubernetes.io/subnets: subnet-0d4f5ab5525665f2c,subnet-0a331faca6bd54737 
     alb.ingress.kubernetes.io/security-groups: sg-053e418cf068d5134,sg-08c8a16a9dd919486
-     ##dont forget to add SG with the description(EKS created security group applied to ENI that is attached to EKS Control Plane master nodes, as well as any managed workloads or maybe try tagging as the picture says
+     ##dont forget to add SG formed automatically with the description(EKS created security group applied to ENI that is attached to EKS Control Plane master nodes, as well as any managed workloads) or maybe try tagging as the picture says
 spec:
   rules:
     - http:
