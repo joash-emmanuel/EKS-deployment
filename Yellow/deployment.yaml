@@ -20,7 +20,13 @@ spec:
         image: 331879450537.dkr.ecr.us-west-2.amazonaws.com/yellow:latest
         ports:
             - containerPort: 80
-            
+        resources:
+          limits:
+            memory: "1000Mi"
+            cpu: "250m"
+          requests:
+            memory: "1000Mi"
+            cpu: "250m"
 ---
 apiVersion: v1
 kind: Service
