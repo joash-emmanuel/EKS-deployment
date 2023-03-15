@@ -7,12 +7,12 @@ metadata:
     app: color-app
   annotations:
     kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/scheme: internal
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/healthcheck-protocol: HTTP
     alb.ingress.kubernetes.io/healthcheck-port: traffic-port
-    alb.ingress.kubernetes.io/subnets: subnet-0d4f5ab5525665f2c,subnet-0a331faca6bd54737 
-    alb.ingress.kubernetes.io/security-groups: sg-053e418cf068d5134,sg-08c8a16a9dd919486
+    alb.ingress.kubernetes.io/subnets: subnet-04b8484482de307be,subnet-075dc3ea7209d50cd
+    alb.ingress.kubernetes.io/security-groups: sg-053e418cf068d5134,sg-0847849c8308d3e1b
      ##dont forget to add SG formed automatically with the description(EKS created security group applied to ENI that is attached to EKS Control Plane master nodes, as well as any managed workloads) or maybe try tagging as the picture says
 spec:
   rules:
